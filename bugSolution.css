@@ -1,0 +1,28 @@
+/* bugSolution.css */
+
+/* Correcting the calc() function for consistent results */
+.container {
+  width: 500px; /* Define explicit width for the parent */
+}
+
+.inner {
+  width: calc(100% - 20px); /* Ensure parent has a defined width */
+  background-color: lightblue;
+}
+
+/* Avoid mixing units without proper conversion where possible */
+.element {
+  font-size: 16px; /* Use pixels for consistency */
+  margin: 10px; /* Use pixels for consistency */
+}
+
+/*Handle potential browser differences with a fallback*/
+.fallback {
+  width: calc(100% - 20px);
+  width: 480px; /*Fallback in case calc does not work as expected */
+}
+
+/* Always include a space between values in calc()*/
+.spaced {
+  height: calc(100vh - 20px);
+} 
